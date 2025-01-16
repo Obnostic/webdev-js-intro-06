@@ -5,34 +5,35 @@ const evenOrOddElement = document.getElementById("even-or-odd");
 const sumTheNumbersElement = document.getElementById("sum-the-numbers");
 const createNumberArrayElement = document.getElementById("create-number-array");
 
-
+let nu;
     // Write the logic to decide if the variable "num" is even or odd
     // and set the element's value the string "Even" or "Odd" accordingly
 function evenOrOdd() {
     const num = 3;
-    function Even(numb) {
-        return numb % 2 === 0;
+    let numBool;
+    function Even(num) {
+        return numBool % 2 == 0;
       }
       
-      function Odd(numb) {
-        return numb % 2 !== 0;
-      }
+    function Odd(num) {
+        return numBool % 2 !== 0;
+    }
         
-      if (even(num)) {
-        console.log(num + " is even.");
+    if (numBool) {
+         console.log("Even");
       } else {
-        console.log(num + " is odd.");
-      }
-
-
+         console.log("Odd");
+    }
+    
 }
 
 function sumTheNumbers() {
     let sum = 0;
+    let i = 0;
     // Write the logic to sum the numbers 1 through 10
     // using a for loop. Check the expected output
     // on the assignment page
-    for (let i=0; i === 10; i++) {
+    for (i = 0; i < 11; i++) {
         sum = sum + i;
     }
     console.log(sum);
@@ -47,10 +48,16 @@ function createNumberArray() {
     // on the assignment page
 
     const numberArray = [];
-    for (let j=0; j < 9; j++) {
+    let presentString="";
+    let commaString=",";
+    for (let j=0; j < 10; j++) {
         numberArray[j] = j+1;
     }
-    console.log(numberArray);
+    for (let k=0; k < 10; k++) {
+        if (k > 8) {commaString=""};
+    presentString = presentString + numberArray[k] + commaString;
+    }
+    console.log(presentString);
 }
 
 
@@ -60,8 +67,13 @@ function render() {
     evenOrOdd();
     sumTheNumbers();
     createNumberArray();
-}
+};
+
+
 
 submissionBtn.addEventListener("click", function () {
+    
+    /*
+    document.getElementById("even-or-odd").innerHTML=nu;  */
     render();
 });
