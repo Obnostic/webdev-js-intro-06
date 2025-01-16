@@ -58,7 +58,8 @@ function createNumberArray() {
 function render() {
     // Call the created functions
     evenOrOdd();
-    
+    sumTheNumbers();
+    createNumberArray();
 }
 
 submissionBtn.addEventListener("click", function () {
