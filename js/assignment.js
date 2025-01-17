@@ -20,9 +20,9 @@ function evenOrOdd() {
     }
         
     if (numBool) {
-         console.log("Even");
+        document.getElementById("even-or-odd").innerHTML="Even";
       } else {
-         console.log("Odd");
+        document.getElementById("even-or-odd").innerHTML="Odd";
     }
     
 }
@@ -36,7 +36,7 @@ function sumTheNumbers() {
     for (i = 0; i < 11; i++) {
         sum = sum + i;
     }
-    console.log(sum);
+    document.getElementById("sum-the-numbers").innerHTML=sum;
 }
 
 
@@ -57,23 +57,23 @@ function createNumberArray() {
         if (k > 8) {commaString=""};
     presentString = presentString + numberArray[k] + commaString;
     }
-    console.log(presentString);
+    document.getElementById("create-number-array").innerHTML=presentString;
 }
 
 
 
-function render() {
+ function render() {
     // Call the created functions
     evenOrOdd();
     sumTheNumbers();
     createNumberArray();
-};
+}; 
 
 
 
 submissionBtn.addEventListener("click", function () {
     
-    /*
-    document.getElementById("even-or-odd").innerHTML=nu;  */
-    render();
+    
+  
+   render(); 
 });
