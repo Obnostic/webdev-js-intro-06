@@ -2,7 +2,9 @@
  that are not declared */
 "use strict"
 
- for (let i = 0; i < 5; i++) {
+/*
+
+for (let i = 0; i < 5; i++) {
     console.log(i);         // Output up to 4
 }
 
@@ -39,7 +41,8 @@ while (n < 8) {
 
 let p = 0;
 while (p < 8) {
-   /* if (p === 5) {continue}; */
+    if (p === 5) {continue;}
     console.log(p);
     p++;
-}                           /*STOPS @ 4 */
+}                           // Output up to 4, the continue statement exits the loop
+                            // Why?  It's just supposed to skip 5... should be 0 1 2 3 4 6 7 
